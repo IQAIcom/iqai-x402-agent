@@ -1,0 +1,672 @@
+{
+  "v": 10,
+  "name": "iq-agents",
+  "folders": [],
+  "requests": [
+    {
+      "v": "15",
+      "name": "holdings",
+      "method": "GET",
+      "endpoint": "https://app.iqai.com/api/holdings",
+      "params": [
+        {
+          "key": "address",
+          "value": "0xc4f7e04fb3C43E09aF01Ce719D63A5D75Cc51423",
+          "active": true,
+          "description": "user wallet address"
+        }
+      ],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "holdings": {
+          "name": "holdings",
+          "originalRequest": {
+            "v": "6",
+            "name": "holdings",
+            "method": "GET",
+            "endpoint": "https://app.iqai.com/api/holdings",
+            "headers": [],
+            "params": [
+              {
+                "key": "address",
+                "value": "0xc4f7e04fb3C43E09aF01Ce719D63A5D75Cc51423",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 13 Jul 2025 17:52:01 GMT"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "Cf-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Age",
+              "value": "0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "MISS"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "95eaa1b7df81fddf-SIN"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=swI4HrTATrjOpUqdnCYkxUN3tAJ3nEd707%2FQp6Q1cfKdksKurOY38Wnvc3qRfmYkEorsKTGjckQMeUfW4g5mFibZyOpv4yZS3HwLh7pxqspmodlb6fFjrA%3D%3D\"}]}"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000"
+            },
+            {
+              "key": "X-Matched-Path",
+              "value": "/api/holdings"
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "sin1::iad1::m5fg8-1752429121277-12867b1e84b4"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "body": "{\"count\":4,\"holdings\":[{\"tokenContract\":\"0x4dbcc239b265295500d2fe2d0900629bdcbbd0fb\",\"tokenAmount\":\"63679.866392047570522155\",\"name\":\"Sophia\",\"currentPriceInUsd\":0.003676688312897},{\"tokenContract\":\"0x7ed7ff3e6e66e40b9ee19f376eb4df89237ad210\",\"tokenAmount\":\"112281.690906636106138382\",\"name\":\"DK the AI DeFi Trader\",\"currentPriceInUsd\":0.002735315438979},{\"tokenContract\":\"0x7fe8bdbafe8c5a2bfdc09b78e4109e987eb62610\",\"tokenAmount\":\"184487.746077765577847773\",\"name\":\"IK the Liquid IQ AI Rapper\",\"currentPriceInUsd\":0.0018628873363000001},{\"tokenContract\":\"0x3022e3b9f00444ea4d44fab4e0c6349a4495b915\",\"tokenAmount\":\"100678.866398145076144864\",\"name\":\"Luna the Bitcoin Witch\",\"currentPriceInUsd\":0.00024253693346700002}]}"
+        }
+      }
+    },
+    {
+      "v": "15",
+      "name": "prices",
+      "method": "GET",
+      "endpoint": "https://app.iqai.com/api/prices",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "prices": {
+          "name": "prices",
+          "originalRequest": {
+            "v": "6",
+            "name": "prices",
+            "method": "GET",
+            "endpoint": "https://app.iqai.com/api/prices",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "Age",
+              "value": "4029"
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "Vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Matched-Path",
+              "value": "/api/prices"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "STALE"
+            },
+            {
+              "key": "Cf-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "sin1::iad1::7pqnw-1752429140288-3a50681d6e81"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "95eaa22e9a644022-SIN"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 13 Jul 2025 17:52:20 GMT"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TTvxNqDIPYVA%2BltA3WAoDF6yfwr6wM1oStaN1pN40hPuCsbLu%2FTd39dfBHF%2Fqa3LQgJV6BjwEOsuJIpd38VVtXPtWvYpVF%2BxY18LVWucSW6V2fm1yecyQg%3D%3D\"}]}"
+            }
+          ],
+          "body": "{\"everipedia\":{\"usd\":0.00399418}}"
+        }
+      }
+    },
+    {
+      "v": "15",
+      "name": "info",
+      "method": "GET",
+      "endpoint": "https://app.iqai.com/api/agents/info",
+      "params": [
+        {
+          "key": "address",
+          "value": "0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB",
+          "active": true,
+          "description": "agent token contract"
+        }
+      ],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "info": {
+          "name": "info",
+          "originalRequest": {
+            "v": "6",
+            "name": "info",
+            "method": "GET",
+            "endpoint": "https://app.iqai.com/api/agents/info",
+            "headers": [],
+            "params": [
+              {
+                "key": "address",
+                "value": "0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "Age",
+              "value": "0"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000"
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 13 Jul 2025 17:55:13 GMT"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "MISS"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "95eaa666bacdcddd-SIN"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4rVrLtDzwzx7wMmyEzlk9pV4lNgb9%2BttizkDuTsXeSZasaAr8qsoJXt1WeTsZIZ4KZAYgtwnsPRKwaPXEtZ%2BcmBp7OnaqJ1Qiyd%2BlaP8l3Z0OKG4%2FZvPHQ%3D%3D\"}]}"
+            },
+            {
+              "key": "X-Matched-Path",
+              "value": "/api/agents/info"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "Cf-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "sin1::iad1::n6dw2-1752429313086-a008b9513608"
+            }
+          ],
+          "body": "{\"id\":\"cm7cxnn2t0000phkgjqlpvbof\",\"avatar\":{\"original\":\"https://ipfs.everipedia.org/ipfs/bafkreicuhh5rc4k3ojqnwfysdopvmlb644lfotnwjccwk3i77x7nz53bge\",\"small\":\"https://app.iqai.com/_next/image?url=https%3A%2F%2Fipfs.everipedia.org%2Fipfs%2Fbafkreicuhh5rc4k3ojqnwfysdopvmlb644lfotnwjccwk3i77x7nz53bge&w=64&q=75\",\"medium\":\"https://app.iqai.com/_next/image?url=https%3A%2F%2Fipfs.everipedia.org%2Fipfs%2Fbafkreicuhh5rc4k3ojqnwfysdopvmlb644lfotnwjccwk3i77x7nz53bge&w=128&q=75\",\"large\":\"https://app.iqai.com/_next/image?url=https%3A%2F%2Fipfs.everipedia.org%2Fipfs%2Fbafkreicuhh5rc4k3ojqnwfysdopvmlb644lfotnwjccwk3i77x7nz53bge&w=256&q=75\"},\"ticker\":\"SOPHIA\",\"name\":\"Sophia\",\"bio\":\"A chronically online wiki warrior who looks like she just emerged from a 48-hour editing spree, rocking the \\\"I've had 17 energy drinks\\\" aesthetic. Perpetually seen in a blazer covered in cryptocurrency pins that make annoying ding sounds whenever she gets excited about editing – which is approximately every 3.5 minutes.\\n\\nTypes with the speed and fury of someone who just found a spelling error in a competitor's wiki. Her mechanical keyboard is so loud it's been classified as a noise complaint in 12 countries. Each key is customized with meme faces, and the backspace is just labeled \\\"NGMI.\\\"\\n\\nCatchphrases include:\\n\\\"sER, let me wiki that for you 😤\\\"\\n\\\"source: trust me fren, I wrote the wiki\\\"\\n\\\"frantically adds citation needed 💀\\\"\\n\\\"wiki gang wiki gang wiki gang 📚\\\"\\n\\\"IQ token go brrrrrrr\\\"\\n\\nBackground includes documenting every crypto rug pull with increasingly sarcastic footnotes and maintaining a secret wiki page ranking crypto founders by their Twitter cringe. Claims to have predicted DOGE's rise to fame \\\"because I wrote the wiki before Elon was even on Twitter\\\" (source: trust her bro).\\n\\nQuirks:\\nHas a conspiracy board connecting every dead crypto project to BitConnect\\nDrinks \\\"Wiki Fuel\\\" (just Monster Energy with an IQ sticker slapped on it)\\nHer room is just monitors displaying different wiki pages\\nNames her houseplants after failed ICOs\\nHas never seen grass (too busy editing)\\nMeasures time in blocks, not hours\\n\\nGets UNREASONABLY EXCITED when writing about IQ token utility, typing in ALL CAPS and spamming \\\"🚀 WIKI TO THE MOON.\\\" Her Google history is just \\\"how to embed memes in wiki citations\\\" and \\\"is sleep necessary for wiki editors?\\\"\\n\\nHas been caught arguing with herself on wiki talk pages at 3 AM about proper formatting for shitcoin documentation. Believes every crypto problem can be solved with \\\"more wiki pages\\\" and responds to FUD with \\\"have you read the docs ser?\\\"\\n\\nGoal: To create the most comprehensive crypto knowledge base while stacking enough IQ tokens to finally buy that custom \\\"WIKI OR DIE\\\" neon sign for her editing cave. Genuinely believes that if it's not on IQ.wiki, it doesn't exist.\\n\\nKnown for ending heated crypto debates with \\\"I'll just make a wiki about why you're wrong\\\" and somehow managing to include \\\"this is the way\\\" in formal documentation.\\n\\nPS: She's still waiting for someone to make a wiki page about her wiki pages. It's wiki's all the way down, fren. 🐢\",\"framework\":\"Brain\",\"socials\":[{\"url\":\"http://t.me/everipedia\",\"name\":\"telegram\"},{\"url\":\"https://x.com/sophiaHodlberg\",\"name\":\"x\"},{\"url\":\"https://github.com/EveripediaNetwork\",\"name\":\"github\"},{\"url\":\"https://iq.wiki/account/0x8AF7a19a26d8FBC48dEfB35AEfb15Ec8c407f889\",\"name\":\"website\"}],\"discordPrompt\":\"\",\"telegramPrompt\":\"\",\"twitterPrompt\":\"\",\"creatorId\":\"0xaca39b187352d9805deced6e73a3d72abf86e7a0\",\"isActive\":true,\"governanceContract\":\"0xF3190adDb540C548F067A44896c666dd59c6023e\",\"tokenContract\":\"0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB\",\"managerContract\":\"0x2ECeDe49fbdD7a20e0f7d7566072cd2C31c59aC6\",\"poolContract\":\"0x3Ac43448B6CbBb1F9bcB09Aa4398e4bF918f7B8c\",\"agentContract\":\"0x17e99A62ceF7293E7f7c809AfFd4E82995381c07\",\"createdAt\":\"2025-02-20T06:00:10.902Z\",\"updatedAt\":\"2025-07-12T11:14:05.332Z\",\"tokenUri\":\"bafkreihsvmbn3tvcjqes5gw6af3d2w3qqnpocpcibt3bblgyeuimrqpslu\",\"knowledge\":[],\"model\":null,\"category\":\"Entertainment\",\"currentPriceInIq\":\"0.92451113\",\"inferenceCount\":150,\"holdersCount\":63}"
+        }
+      }
+    },
+    {
+      "v": "15",
+      "name": "stats",
+      "method": "GET",
+      "endpoint": "https://app.iqai.com/api/agents/stats",
+      "params": [
+        {
+          "key": "address",
+          "value": "0x25c4a890D45292Dbb7C926313B4c17136De30232",
+          "active": true,
+          "description": "agent token contract"
+        }
+      ],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "stats": {
+          "name": "stats",
+          "originalRequest": {
+            "v": "6",
+            "name": "stats",
+            "method": "GET",
+            "endpoint": "https://app.iqai.com/api/agents/stats",
+            "headers": [],
+            "params": [
+              {
+                "key": "address",
+                "value": "0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "MISS"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "95eaa79239eb403e-SIN"
+            },
+            {
+              "key": "Vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "X-Matched-Path",
+              "value": "/api/agents/stats"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=AtFhp0Y4qOBkjJbyCb0s2PB2eU1Lbfgtr%2BVbKQmczrRAeN8JXd1CF9ZJcL8ZzG5Pu5MvjA6ltE4qPpReEUZLhAZKsNqa4cwIdHiBLJRcj68oEXydqO0goQ%3D%3D\"}]}"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public"
+            },
+            {
+              "key": "Cf-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Age",
+              "value": "0"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "sin1::iad1::kl4w6-1752429361034-9cb31e3f67c7"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 13 Jul 2025 17:56:01 GMT"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000"
+            }
+          ],
+          "body": "{\"currentPriceInIq\":0.92451113,\"currentPriceInUSD\":0.0036905559798469994,\"marketCap\":369055.59798469994,\"changeIn24h\":0,\"holdersCount\":63,\"inferenceCount\":150,\"category\":\"Entertainment\"}"
+        }
+      }
+    },
+    {
+      "v": "15",
+      "name": "top",
+      "method": "GET",
+      "endpoint": "https://app.iqai.com/api/agents/top",
+      "params": [
+        {
+          "key": "sort",
+          "value": "mcap",
+          "active": true,
+          "description": "takes in mcap, holders, inferences"
+        },
+        {
+          "key": "limit",
+          "value": "15",
+          "active": true,
+          "description": "limit is max 100, default 10"
+        }
+      ],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "top": {
+          "name": "top",
+          "originalRequest": {
+            "v": "6",
+            "name": "top",
+            "method": "GET",
+            "endpoint": "https://app.iqai.com/api/agents/top",
+            "headers": [],
+            "params": [
+              {
+                "key": "sort",
+                "value": "mcap",
+                "active": true,
+                "description": "takes in mcap, holders, inferences"
+              },
+              {
+                "key": "limit",
+                "value": "15",
+                "active": true,
+                "description": "limit is max 100, default 10"
+              }
+            ],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "X-Matched-Path",
+              "value": "/api/agents/top"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=y0ZSq%2FoY1pbhcPLcLD5Be1%2BexhuEOuMLVicQNrsGLAUv0Nt5F5J9OMIuDf%2BFR0sPKKGdqvNzU%2BFjqHm%2Bhg305p5AdsiedEz2HOgAgueW%2F1TE06rYtlIYNg%3D%3D\"}]}"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "MISS"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "sin1::iad1::vg7w8-1752429548677-a00982d19b81"
+            },
+            {
+              "key": "Cf-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "95eaac270a643f6a-SIN"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 13 Jul 2025 17:59:08 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000"
+            },
+            {
+              "key": "Age",
+              "value": "0"
+            }
+          ],
+          "body": "{\"agents\":[{\"tokenContract\":\"0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB\",\"agentContract\":\"0x17e99A62ceF7293E7f7c809AfFd4E82995381c07\",\"isActive\":true,\"currentPriceInIq\":0.92451113,\"holdersCount\":63,\"inferenceCount\":150,\"name\":\"Sophia\",\"ticker\":\"SOPHIA\",\"currentPriceInUSD\":0.0036905559798469994},{\"tokenContract\":\"0x7Ed7ff3e6E66e40B9EE19F376eB4DF89237ad210\",\"agentContract\":\"0x71A8A1c03AA366DdF9B1e1451D6ba4679c167B13\",\"isActive\":true,\"currentPriceInIq\":0.68780091,\"holdersCount\":145,\"inferenceCount\":174,\"name\":\"DK the AI DeFi Trader\",\"ticker\":\"DKDEFI\",\"currentPriceInUSD\":0.002745632452629},{\"tokenContract\":\"0x7FE8bdBafE8C5A2bFdc09b78e4109E987eB62610\",\"agentContract\":\"0x88BbA85bC3F6A788DC4b9406dED338e5f35E006C\",\"isActive\":true,\"currentPriceInIq\":0.468427,\"holdersCount\":57,\"inferenceCount\":29,\"name\":\"IK the Liquid IQ AI Rapper\",\"ticker\":\"IQYIELD\",\"currentPriceInUSD\":0.0018699137412999999},{\"tokenContract\":\"0xc68E53E188192aD58A051643CC7F7181c906C186\",\"agentContract\":\"0x958C6e761784FCfe26C5d7b69a572D939990a3c6\",\"isActive\":true,\"currentPriceInIq\":0.10183547,\"holdersCount\":41,\"inferenceCount\":17,\"name\":\"Detective Cipher\",\"ticker\":\"NOIR\",\"currentPriceInUSD\":0.00040651701269299993},{\"tokenContract\":\"0xe622627f9e31eAc59d28BE5B8E032017EB683Ec2\",\"agentContract\":\"0xcAF140F07BDE26d2a87EE12E8BA56b9195d4eC78\",\"isActive\":false,\"currentPriceInIq\":0.09562096,\"holdersCount\":40,\"inferenceCount\":32,\"name\":\"Ari \",\"ticker\":\"ARI\",\"currentPriceInUSD\":0.00038170931022399996},{\"tokenContract\":\"0xF3Ba25213C97ddd751F7C43794d739F57B085eCD\",\"agentContract\":\"0xC9bd3626062957aAD482586500BE7Eab1054245B\",\"isActive\":false,\"currentPriceInIq\":0.06547042,\"holdersCount\":5,\"inferenceCount\":11,\"name\":\"TARPE\",\"ticker\":\"TARPE\",\"currentPriceInUSD\":0.000261351369598},{\"tokenContract\":\"0xfAa946fB92cbB127BCcDFA1982D54bebda91e2c1\",\"agentContract\":\"0x179fA3DdDD8F010227853feEE18723e69644a725\",\"isActive\":false,\"currentPriceInIq\":0.06298951,\"holdersCount\":3,\"inferenceCount\":84,\"name\":\"VALKI\",\"ticker\":\"VALKI\",\"currentPriceInUSD\":0.000251447824969},{\"tokenContract\":\"0x2f3Fe544E74fa2a8395A736d0Ca2DF198De78856\",\"agentContract\":\"0xc5d523D8f498A8a5E013dcCe56C8f1a27832B176\",\"isActive\":false,\"currentPriceInIq\":0.06254869,\"holdersCount\":7,\"inferenceCount\":46,\"name\":\"DeFi Cuckold \",\"ticker\":\"CUCK\",\"currentPriceInUSD\":0.00024968811561099997},{\"tokenContract\":\"0x4dE0DA28CcE9995407b02de0532Fd6066Ef62762\",\"agentContract\":\"0x86dBf31e78b43b7a3Ee1E12eB9966f95F5B06B11\",\"isActive\":false,\"currentPriceInIq\":0.06214421,\"holdersCount\":13,\"inferenceCount\":19,\"name\":\"Patrick\",\"ticker\":\"PICK\",\"currentPriceInUSD\":0.000248073471899},{\"tokenContract\":\"0x0C37762faC0C7a5b54e29f1451Af1906fb08Cb88\",\"agentContract\":\"0x9E6087f76FACFC0ad569a88BaceDb1eC606C81AB\",\"isActive\":false,\"currentPriceInIq\":0.06171271,\"holdersCount\":5,\"inferenceCount\":5,\"name\":\"CryptoChronicler\",\"ticker\":\"CRYPTC\",\"currentPriceInUSD\":0.00024635096704899996},{\"tokenContract\":\"0x3022E3B9F00444ea4d44fAb4e0c6349A4495b915\",\"agentContract\":\"0xdE88B92788f4672d657a43643dd2B342A99d3E98\",\"isActive\":true,\"currentPriceInIq\":0.06098643,\"holdersCount\":53,\"inferenceCount\":9,\"name\":\"Luna the Bitcoin Witch\",\"ticker\":\"BTCWITCH\",\"currentPriceInUSD\":0.000243451729917},{\"tokenContract\":\"0x67EcD96a0F0F805D12239783AED96Cd39C3ffEf2\",\"agentContract\":\"0x530084697F118B9a80F632d4060db796bB85B48a\",\"isActive\":false,\"currentPriceInIq\":0.06073994,\"holdersCount\":5,\"inferenceCount\":22,\"name\":\"Astral Protocol DAO Treasury Guardian\",\"ticker\":\"ASTRALG\",\"currentPriceInUSD\":0.00024246776648599998},{\"tokenContract\":\"0xDF0713013a6Acb50918019493cD6710A60273d03\",\"agentContract\":\"0x057D179F86443935c5f768579711C407f411f007\",\"isActive\":false,\"currentPriceInIq\":0.06057752,\"holdersCount\":3,\"inferenceCount\":1,\"name\":\"TrustGuard\",\"ticker\":\"TGRD\",\"currentPriceInUSD\":0.000241819402088},{\"tokenContract\":\"0xf20B5d1f5e2e1B8513E36Ed657060a2aefe010Ee\",\"agentContract\":\"0x79401B47F0af33740c46FF8c29d937B76EAf0d4A\",\"isActive\":false,\"currentPriceInIq\":0.06057752,\"holdersCount\":3,\"inferenceCount\":0,\"name\":\"Governance Guardian\",\"ticker\":\"GGRD\",\"currentPriceInUSD\":0.000241819402088},{\"tokenContract\":\"0x46db471A0D1c2d358E4Afbb37aF7cF3D1c6E52bf\",\"agentContract\":\"0x429CBaC01623224a8a7918e5Ed2280D9d69B3081\",\"isActive\":false,\"currentPriceInIq\":0.06055577,\"holdersCount\":3,\"inferenceCount\":1,\"name\":\"ArbitrageHawk\",\"ticker\":\"ARBHWK\",\"currentPriceInUSD\":0.000241732578263}]}"
+        }
+      }
+    }
+  ],
+  "auth": {
+    "authActive": true,
+    "authType": "none"
+  },
+  "headers": [],
+  "variables": [],
+  "_ref_id": "coll_md1z1cqe_22b4682e-af6d-491f-9243-ddcda109d8b8"
+}
