@@ -31,7 +31,7 @@ const PAID_ROUTES: Record<string, { price: string; network: Network }> = {
 app.use(
 	"/*",
 	cors({
-		origin: ["http://localhost:5173", "http://localhost:3000"],
+		origin: ["http://localhost:3001"],
 		credentials: true,
 	}),
 );
@@ -127,5 +127,5 @@ console.log(`
 
 serve({
 	fetch: app.fetch,
-	port: parseInt(process.env.PORT || "3001", 10),
+	port: 3001,
 });

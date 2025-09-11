@@ -1,6 +1,6 @@
 import {
 	createOpenRouter,
-	type LanguageModelV1,
+	type LanguageModelV2,
 } from "@openrouter/ai-sdk-provider";
 import { config } from "dotenv";
 import { z } from "zod";
@@ -17,7 +17,7 @@ export const envSchema = z.object({
 });
 
 export const env = envSchema.parse(process.env);
-export let model: string | LanguageModelV1;
+export let model: string | LanguageModelV2;
 
 if (env.OPEN_ROUTER_KEY) {
 	console.log("🚀 AGENT WILL USE OPENROUTER 🚀");
