@@ -3,28 +3,25 @@
 	"version": "1.0.0",
 	"description": "Agent built with ADK-TS that has specialized knowledge on IQAI's ATP",
 	"main": "dist/index.js",
+	"private": true,
 	"scripts": {
-		"dev": "adk web"
+		"build": "tsc",
+		"dev": "adk web",
+		"start": "node dist/index.js",
+		"clean": "rimraf dist",
+		"prebuild": "pnpm clean"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"packageManager": "pnpm@10.13.1",
 	"dependencies": {
-		"@ai-sdk/provider": "^2.0.0",
-		"@iqai/adk": "^0.3.2",
-		"@openrouter/ai-sdk-provider": "^1.2.0",
+		"@iqai/adk": "^0.3.3",
+		"dotenv": "^17.2.2",
+		"zod": "^4.1.5",
 		"axios": "^1.11.0",
-		"dedent": "^1.6.0",
-		"dotenv": "^17.2.1",
-		"viem": "^2.37.5",
-		"x402-axios": "^0.6.0",
-		"zod": "^4.1.5"
+		"x402-axios": "^0.6.0"
 	},
 	"devDependencies": {
 		"@types/node": "^24.3.1",
 		"rimraf": "^6.0.1",
-		"tsx": "^4.20.4",
+		"tsx": "^4.20.5",
 		"typescript": "^5.9.2"
 	}
 }

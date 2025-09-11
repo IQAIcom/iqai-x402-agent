@@ -1,11 +1,11 @@
 import { AgentBuilder } from "@iqai/adk";
 import dedent from "dedent";
-import { model } from "../../env";
+import { env } from "../../env";
 import { clientTools } from "./tools";
 
 const getIQx402Agent = async () =>
 	AgentBuilder.create("IQ_x402")
-		.withModel(model)
+		.withModel(env.LLM_MODEL)
 		.withDescription(
 			"An agent that specializes on giving insights on IQAI's ATP",
 		)
