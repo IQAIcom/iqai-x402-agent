@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "adk web",
-		"start": "node dist/index.js",
+		"start": "adk web",
 		"clean": "rimraf dist",
 		"prebuild": "pnpm clean"
 	},

@@ -7,7 +7,9 @@
 		"dev": "concurrently \"pnpm run dev:server\" \"pnpm run dev:agent\"",
 		"dev:server": "cd server && pnpm run dev",
 		"dev:agent": "cd agent && pnpm run dev",
-		"install:all": "pnpm install && cd server && pnpm install && cd ../agent && pnpm install",
+		"build": "cd server && pnpm run build && cd ../agent && pnpm run build",
+		"start": "concurrently \"cd server && pnpm run start\" \"cd agent && pnpm run start\"",
+		"install": "pnpm install && cd server && pnpm install && cd ../agent && pnpm install",
 		"lint": "cd server && biome check . && cd ../agent && biome check .",
 		"lint:fix": "cd server && biome check --write . && cd ../agent && biome check --write .",
 		"format": "cd server && biome format --write . && cd ../agent && biome format --write ."
