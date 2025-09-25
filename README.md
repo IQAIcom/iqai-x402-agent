@@ -2,30 +2,31 @@
  <img src="https://files.catbox.moe/vumztw.png" alt="ADK TypeScript Logo" width="100" />
  <br/>
  <h1>ADK-TS x402 Agent Template</h1>
- <b>Starter template for creating monetized AI Agents with ADK-TS and x402 protocol</b>
+ <b>Starter template for creating monetized AI Agents with ADK-TS and x402 payment protocol</b>
  <br/>
-  <i>LLM-powered • Micropayments • API Monetization • TypeScript</i>
+  <i>LLM-powered • Micropayments • ATP Monetization • TypeScript</i>
 </div>
 
 ---
 
-# x402 Agent Template - Monetized AI Agents with Micropayments
+# x402 Agent Template - Monetized AI Agents with x402 Protocol
 
-A template showing how to build AI agents that can access premium API endpoints through the x402 micropayment protocol. The agent pays for API calls automatically using cryptocurrency, enabling new business models for AI-powered services.
+A template showing how to build AI agents that access IQ AI's Agent Tokenization Platform (ATP) through paid API endpoints using the x402 micropayment protocol. The agent pays for API calls automatically using cryptocurrency, enabling new business models for AI-powered services.
 
 **Built with [ADK-TS](https://adk.iqai.com/) - Agent Development Kit (ADK) for TypeScript**
 
 ## 🎯 What This Template Shows
 
-This template demonstrates how to build **monetized AI-powered applications** that:
+This template demonstrates how to build **monetized AI agents** that:
 
-1. **🤖 Uses AI Agents** (built with ADK-TS) to interact with premium APIs:
-   - **IQ ATP Agent**: Specializes in IQAI's Agent Tokenization Platform insights
-   - **Pricing Agent**: Fetches current pricing for all premium endpoints
-   - **Data Tools**: Access agent stats, holdings, and market data
+1. **🤖 Access IQ AI's ATP** (Agent Tokenization Platform) through paid API endpoints:
+   - **Token Prices**: Get current token prices for IQ AI agents
+   - **Agent Holdings**: Get wallet holdings for IQ AI agents
+   - **Agent Info**: Retrieve agent metadata by token contract address
+   - **Agent Stats**: Get performance statistics for agents
+   - **Top Agents**: List top-performing agents by market cap, holders, or inferences
 
-2. **💰 Enables micropayments** using the x402 protocol for API access
-
+2. **💰 Implement micropayments** using the x402 protocol for API access monetization
 3. **🔐 Automatic payment handling** with Web3 wallet integration
 
 4. **🌐 Provides monetized API server** that proxies premium endpoints
@@ -34,7 +35,7 @@ This template demonstrates how to build **monetized AI-powered applications** th
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────────┐
-│   AI Agent      │    │   x402 Server    │    │   IQ AI API         │
+│   AI Agent      │    │   x402 Server    │    │   IQ AI ATP API     │
 │   (ADK-TS)      │    │                  │    │                     │
 │ • Wallet Client │───▶│ • Payment Gates  │───▶│ • Premium Endpoints │
 │ • Premium Tools │    │ • Proxy Routes   │    │ • ATP Data          │
@@ -48,7 +49,7 @@ This template demonstrates how to build **monetized AI-powered applications** th
 
 - Node.js 18+ and pnpm
 - A Google account (for free AI API access)
-- A Web3 wallet with Base Sepolia ETH
+- A crypto wallet with Base Sepolia ETH and USDC for micropayments
 - Basic understanding of cryptocurrency/Web3
 
 ## Step 1: Create Project Using ADK CLI
@@ -66,28 +67,30 @@ pnpm install
 
 #### 🔑 Google AI API Key (Required)
 
-1. Visit [Google AI Studio](https://aistudio.google.com/apikey)
+1. Visit [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Sign in with your Google account
 3. Click "Create API Key"
 4. Copy the generated key
 
-#### 🔑 Web3 Wallet Setup (Required)
+#### 🔑 Wallet Private Key (Required)
 
-**Create a new wallet for testing:**
+You need a wallet private key with Base Sepolia ETH for micropayments:
 
-1. Generate a new private key (never use your main wallet)
-2. You can use tools like MetaMask or generate programmatically
-3. Fund it with Base Sepolia ETH from [Base faucet](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)
+1. **Create a new wallet** (recommended for testing):
+   - Use [MetaMask](https://metamask.io/), [Rainbow](https://rainbow.me/), or any Ethereum wallet
+   - Export the private key (keep this secure!)
 
-> **⚠️ Security Warning:**
->
-> - Only use test wallets with small amounts
-> - Never share your private key
-> - Use Base Sepolia (testnet) for development
+2. **Fund with Base Sepolia ETH**:
+   - Get Base Sepolia ETH from [Google Sepolia Faucet](<https://cloud.google.com/application/web3/faucet/ethereum/sepolia>)
+
+3. **Fund with testnet USDC**:
+   - Get testnet USDC from [Circle Testnet Faucet](https://faucet.circle.com/)
 
 ### Step 3: Configure Environment
 
-#### Server Configuration
+Create environment files for both server and agent:
+
+**Server Configuration (.env in `/server` folder):**
 
 ```bash
 # Navigate to server directory and copy environment file
@@ -99,11 +102,11 @@ Edit `server/.env`:
 
 ```env
 FACILITATOR_URL="https://x402.org/facilitator"
-ADDRESS=0x1234567890123456789012345678901234567890  # Your wallet address (to receive payments)
+ADDRESS= # Your wallet address (to receive payments)
 NETWORK=base-sepolia
 ```
 
-#### Agent Configuration
+**Agent Configuration (.env in `/agent` folder):**
 
 ```bash
 # Navigate to agent directory and copy environment file
@@ -114,90 +117,71 @@ cp .env.example .env
 Edit `agent/.env`:
 
 ```env
+ADK_DEBUG=false # Enable debug mode
 WALLET_PRIVATE_KEY=your_wallet_private_key_here
 GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-### Step 4: Start the Applications
+## Step 4: Start the Services
+
+Start both the payment server and AI agent:
 
 ```bash
-# From the root directory, start both server and agent
+# Start both server and agent in development mode
 pnpm dev
 ```
 
 This will start:
 
-- **Server** on `http://localhost:3001` (x402 payment-gated API)
-- **Agent** on `http://localhost:3000` (ADK web interface)
-
-### Step 5: Fund Your Wallet
-
-Your agent needs Base Sepolia ETH to pay for API calls:
-
-1. **Get Base Sepolia ETH** from [Coinbase faucet](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)
-2. **Verify your balance** is sufficient for testing (small amounts needed)
+- **Server** on `http://localhost:3001` - handles x402 payments and proxies IQ AI ATP API
+- **Agent** on `https://adk-web.iqai.com` - provides web interface to interact with the agent
 
 ## 🧪 Testing Your Template
 
 ### Check Server Status
 
 ```bash
-# Check if your server is running and view pricing
-curl http://localhost:3001/api/get-prices
-
-# Expected response:
-# {
-#   "prices": {
-#     "/api/prices": {"price": "$0.01", "network": "base-sepolia"},
-#     "/api/holdings": {"price": "$0.05", "network": "base-sepolia"},
-#     "/api/agents/info": {"price": "$0.05", "network": "base-sepolia"},
-#     "/api/agents/stats": {"price": "$0.05", "network": "base-sepolia"},
-#     "/api/agents/top": {"price": "$0.10", "network": "base-sepolia"}
-#   }
-# }
+# Check if your server is running and view available endpoints
+curl http://localhost:3001/api/price-list
 ```
 
-### Test Agent Interaction
+Expected response showing endpoint prices:
 
-1. **Open the agent interface** at `http://localhost:3000`
-2. **Greet the agent** with "Hello" - it should:
-   - Fetch current pricing automatically
-   - Display available premium tools
-   - Ask for permission before making paid calls
-3. **Try premium tools** like:
-   - "Get top agents by market cap"
-   - "Show me agent stats for [address]"
-   - "What are my holdings?"
-
-### Example Agent Interactions
-
+```json
+{
+  "prices": {
+    "/api/prices": { "price": "$0.01", "network": "base-sepolia" },
+    "/api/holdings": { "price": "$0.05", "network": "base-sepolia" },
+    "/api/agents/info": { "price": "$0.05", "network": "base-sepolia" },
+    "/api/agents/stats": { "price": "$0.05", "network": "base-sepolia" },
+    "/api/agents/top": { "price": "$0.10", "network": "base-sepolia" }
+  }
+}
 ```
-User: Hello!
 
-Agent: Hi there, I'm your friendly IQAI ATP bot that can assist you finding your next token investment, but that will cost you some serious funds 😏
+### Interact with the Agent
 
-Current x402 endpoint prices:
-- Get Prices: $0.01
-- Holdings: $0.05  
-- Agent Info: $0.05
-- Agent Stats: $0.05
-- Top Agents: $0.10
+1. **Open the web interface** at `https://adk-web.iqai.com`
+2. **Start a conversation** - the agent will greet you and show current endpoint prices
+3. **Ask for agent insights**:
+   - "Show me the top agents by market cap"
+   - "Get holdings for address 0x..."
+   - "Tell me about agent at address 0x..."
 
-What would you like to explore?
+### Test Micropayments
 
-User: Show me the top 5 agents by market cap
+The agent will:
 
-Agent: I can get the top agents data for you, but this will cost $0.10 (paid via x402 protocol). Would you like me to proceed?
-
-User: Yes, go ahead
-
-Agent: [Calls GET_TOP_AGENTS tool with payment]
-Here are the top 5 agents by market cap: ...
-```
+1. ✨ **Show prices** when you start a conversation
+2. 🔐 **Ask permission** before making any paid calls
+3. 💸 **Automatically pay** using your wallet when you approve
+4. 📊 **Return data** from IQ AI's ATP API
 
 ## 🛠️ Development and Testing
 
 ### Test Components Separately
+
+To test just the server or agent individually:
 
 ```bash
 # Test just the server
@@ -210,156 +194,134 @@ cd agent && pnpm dev
 cd agent && npx @iqai/adk-cli run
 ```
 
-### Payment Flow Testing
+### Payment Server Details
 
-1. **Start with small amounts** - test with minimal Base Sepolia ETH
-2. **Monitor transactions** - check Base Sepolia explorer
-3. **Test error handling** - try calls without sufficient funds
-4. **Verify pricing** - ensure costs match your configuration
+- **Base URL**: `http://localhost:3001`
+- **Network**: Base Sepolia
+- **Payment Protocol**: x402
+- **Facilitator**: `https://x402.org/facilitator`
 
-### API Endpoint Details
+### Available Endpoints
 
-The server proxies these IQAI ATP endpoints:
-
-- **`/api/prices`** ($0.01) - Get current token prices
-- **`/api/holdings`** ($0.05) - Get wallet holdings for agents
-- **`/api/agents/info`** ($0.05) - Get agent metadata by address
-- **`/api/agents/stats`** ($0.05) - Get agent statistics by address
-- **`/api/agents/top`** ($0.10) - Get top agents list (sorted by mcap/holders/inferences)
+| Endpoint | Price | Description |
+|----------|-------|-------------|
+| `/api/price-list` | Free | Get endpoint pricing information |
+| `/api/prices` | $0.01 | Get current token prices |
+| `/api/holdings` | $0.05 | Get wallet holdings for IQ AI agents |
+| `/api/agents/info` | $0.05 | Get agent metadata by contract address |
+| `/api/agents/stats` | $0.05 | Get agent performance statistics |
+| `/api/agents/top` | $0.10 | Get top agents by various metrics |
 
 ## 📁 Template Structure
 
-```
-├── agent/                           # ADK-TS Agent Application
+```text
+x402-agent/
+├── agent/                      # AI Agent (ADK-TS)
 │   ├── src/
 │   │   ├── agents/
-│   │   │   └── IQ-x402/
-│   │   │       ├── agent.ts         # Main agent definition
-│   │   │       └── tools.ts         # x402-enabled API tools
-│   │   └── env.ts                   # Environment configuration
-│   └── package.json
-├── server/                          # x402 Payment Server
+│   │   │   └── x402/
+│   │   │       ├── agent.ts    # Main agent configuration
+│   │   │       └── tools.ts    # Payment-enabled API tools
+│   │   └── env.ts              # Environment configuration
+│   ├── package.json
+│   └── README.md
+├── server/                     # Payment Server (Hono + x402)
 │   ├── src/
-│   │   └── index.ts                 # Hono server with x402 middleware
-│   └── package.json
-└── package.json                     # Root workspace configuration
+│   │   └── index.ts            # Payment middleware & ATP proxy
+│   ├── package.json
+│   └── README.md
+├── package.json                # Root workspace configuration
+└── README.md
 ```
 
 ## 🔧 Customizing the Template
 
-### Adjusting Pricing
+### Adding New Agent Tools
 
-Edit the pricing in `server/src/index.ts`:
+1. **Create new tools** in `agent/src/agents/x402/tools.ts`:
 
 ```typescript
-const PAID_ROUTES: Record<string, { price: string; network: Network }> = {
- "/api/prices": { price: "$0.01", network },        // Change prices here
- "/api/holdings": { price: "$0.05", network },      // Format: "$X.XX"
- "/api/agents/info": { price: "$0.05", network },
- "/api/agents/stats": { price: "$0.05", network },
- "/api/agents/top": { price: "$0.10", network },
-};
+const getNewTool = createTool({
+  name: "GET_NEW_TOOL",
+  description: "Description of your new tool",
+  schema: z.object({
+    param: z.string().describe("Parameter description"),
+  }),
+  fn: async ({ param }) => {
+    const response = await apiClient.get(`/api/new-endpoint`, {
+      params: { param },
+    });
+    return response.data;
+  },
+});
 ```
 
-### Adding New Premium Endpoints
+2. **Add to clientTools** array and update agent instructions
 
-1. **Add to server** (`server/src/index.ts`):
+### Adding New Payment Endpoints
+
+1. **Add endpoint to server** in `server/src/index.ts`:
 
 ```typescript
-// Add to PAID_ROUTES
-"/api/new-endpoint": { price: "$0.03", network },
+// Add to PAID_ROUTES configuration
+const PAID_ROUTES = {
+  // ... existing routes
+  "/api/new-endpoint": { price: "$0.05", network },
+};
 
 // Add route handler
 app.get("/api/new-endpoint", async (c) => {
- // Your endpoint logic here
+  // Your endpoint logic here
 });
 ```
 
-2. **Add to agent tools** (`agent/src/agents/IQ-x402/tools.ts`):
+2. **Update agent tools** to use the new endpoint
+
+### Changing Payment Prices
+
+Modify the `PAID_ROUTES` object in `server/src/index.ts`:
 
 ```typescript
-const newTool = createTool({
- name: "NEW_TOOL",
- description: "Description of what this tool does",
- schema: z.object({
-  // Define parameters
- }),
- fn: async (params) => {
-  const response = await apiClient.get("/api/new-endpoint", { params });
-  return response.data;
- },
-});
+const PAID_ROUTES: Record<string, { price: string; network: Network }> = {
+  "/api/prices": { price: "$0.02", network }, // Changed from $0.01
+  // ... other routes
+};
 ```
 
-### Changing Networks
+### Using Different Networks
 
-To use different blockchain networks, update:
+Update the network configuration in your server `.env`:
 
-1. **Server**: Change `NETWORK` in `.env`
-2. **Agent**: Update chain in `tools.ts`:
-
-```typescript
-import { mainnet, polygon, arbitrum } from "viem/chains";
-
-const account = privateKeyToAccount(env.WALLET_PRIVATE_KEY as Address);
-return createWalletClient({
- account,
- chain: polygon, // Change network here
- transport: http(),
-});
-```
-
-### Customizing Agent Behaviour
-
-Edit the agent instructions in `agent/src/agents/IQ-x402/agent.ts`:
-
-```typescript
-.withInstruction(
- dedent`
-  Your custom agent instructions here.
-  Remember to ask for permission before paid calls.
-  Explain pricing to users clearly.
- `,
-)
+```env
+NETWORK=mainnet  # or polygon, optimism, etc.
 ```
 
 ## 🐛 Troubleshooting
 
-### "Insufficient funds" errors
+### "Failed to connect to payment server"
 
-- Ensure your wallet has Base Sepolia ETH
-- Check that you're using the correct network (testnet)
-- Verify the wallet address matches your private key
+- Ensure the server is running on `http://localhost:3001`
+- Check that your `.env` files are properly configured
+- Verify your wallet has sufficient Base Sepolia ETH or other tokens for payments
 
-### "Payment failed" errors
+### "Invalid private key" or "Wallet connection failed"
 
-- Confirm your private key is correct and properly formatted
-- Check that the x402 facilitator is accessible
-- Ensure network connectivity to Base Sepolia
+- Verify the private key is valid and has Base Sepolia ETH
+- Check that the address matches between agent and server config
 
-### "Upstream error" from server
+### "Google API key invalid"
 
-- Verify the IQAI API is accessible
-- Check that your server configuration is correct
-- Ensure your `ADDRESS` in server/.env is valid
+- Ensure the API key is from [Google AI Studio](https://aistudio.google.com/api-keys)
+- Make sure there are no extra spaces in your `.env` file
+- Verify the key has proper permissions for Gemini API
 
-### Agent not showing pricing
+### "Agent tools not responding"
 
-- Verify the server is running on port 3001
-- Check that the GET_PRICES tool is working
-- Ensure CORS is properly configured
-
-### "Tool calls are charged" warnings
-
-This is normal behaviour - the agent warns users before making paid API calls.
+- Verify the payment server is running and accessible
+- Check server logs for any API proxy errors
+- Ensure IQ AI ATP API is accessible from your location
 
 ## 📚 Learn More
-
-### x402 Protocol Resources
-
-- [x402 Protocol Documentation](https://x402.org/)
-- [x402-axios Client](https://www.npmjs.com/package/x402-axios)
-- [x402-hono Middleware](https://www.npmjs.com/package/x402-hono)
 
 ### ADK-TS Resources
 
@@ -367,23 +329,22 @@ This is normal behaviour - the agent warns users before making paid API calls.
 - [ADK-TS CLI Documentation](https://adk.iqai.com/docs/cli)
 - [GitHub Repository](https://github.com/IQAICOM/adk-ts)
 
+### x402 Protocol Resources
+
+- [x402 Protocol Documentation](https://www.x402.org/)
+- [x402 GitHub Repository](https://github.com/coinbase/x402)
+
 ### IQ AI ATP Resources
 
-- [IQ AI Platform](https://app.iqai.com/)
+- [IQ AI Agent Tokenization Platform](https://iqai.com/)
 - [ATP API Documentation](https://app.iqai.com/api)
-
-### Web3 Development
-
-- [Viem Documentation](https://viem.sh/)
-- [Base Network](https://base.org/)
-- [Base Sepolia Faucet](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)
 
 ## 🤝 Contributing
 
 This [template](https://github.com/IQAIcom/adk-ts/tree/main/apps/starter-templates/x402-agent) is open source and contributions are welcome! Feel free to:
 
 - Report bugs or suggest improvements
-- Add new agent examples
+- Add new tool examples
 - Improve documentation
 - Share your customizations
 
