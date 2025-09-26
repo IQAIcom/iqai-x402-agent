@@ -4,8 +4,8 @@
  <h1>ADK-TS x402 Agent Template</h1>
  <b>Starter template for creating monetized AI Agents with ADK-TS and x402 payment protocol</b>
  <br/>
-  <i>LLM-powered • Micropayments • ATP Monetization • TypeScript</i>
-</div>
+  <i>LLM-powered • x402 Micropayments • IQ AI ATP Integration • TypeScript</i>
+  </div>
 
 ---
 
