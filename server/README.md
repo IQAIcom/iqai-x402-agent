@@ -15,7 +15,7 @@ HTTP server that proxies IQ AI's ATP API with x402 micropayment protection.
 
 ```env
 FACILITATOR_URL="https://x402.org/facilitator"
-ADDRESS= # Your wallet address (to receive payments)
+ADDRESS=your_wallet_address_here # Your wallet address (to receive payments)
 NETWORK=base-sepolia
 ```
 

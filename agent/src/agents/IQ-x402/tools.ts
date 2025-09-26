@@ -36,6 +36,7 @@ function getWalletClient(): WalletClient {
 // This will be dynamically set based on wallet connection
 const apiClient: AxiosInstance = withPaymentInterceptor(
 	baseApiClient,
+	// biome-ignore lint/suspicious/noExplicitAny: <>
 	getWalletClient() as any,
 );
 
