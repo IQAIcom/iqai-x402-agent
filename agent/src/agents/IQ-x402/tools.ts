@@ -44,7 +44,7 @@ const getPrices = createTool({
 	name: "GET_PRICES",
 	description: "Get x402 endpoint prices (free) to inform users about costs",
 	fn: async () => {
-		const response = await baseApiClient.get("/api/get-prices");
+		const response = await baseApiClient.get("/api/price-list");
 		return response.data;
 	},
 });

@@ -43,7 +43,7 @@ app.use(
 );
 
 // Free endpoint to let clients know the x402 prices for paid endpoints
-app.get("/api/get-prices", (c) => {
+app.get("/api/price-list", (c) => {
 	return c.json({ prices: PAID_ROUTES });
 });
 
