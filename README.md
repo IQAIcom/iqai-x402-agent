@@ -338,7 +338,7 @@ NETWORK=mainnet  # or polygon, optimism, etc.
 ### IQ AI ATP Resources
 
 - [IQ AI Agent Tokenization Platform (ATP)](https://iqai.com/)
-- [ATP API Documentation](https://app.iqai.com/api)
+- [ATP API Documentation](https://gist.github.com/Royal-lobster/b2c236d57e94ac0c716f37ffbdbf236c)
 
 ## 🤝 Contributing
 
