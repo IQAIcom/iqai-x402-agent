@@ -1,8 +1,8 @@
 <div align="center">
  <img src="https://files.catbox.moe/vumztw.png" alt="ADK TypeScript Logo" width="100" />
  <br/>
- <h1>ADK-TS x402 Agent Template</h1>
- <b>Starter template for creating monetized AI Agents with ADK-TS and x402 payment protocol</b>
+ <h1>IQ AI x x402 Agent Template</h1>
+ <b>Starter template for creating monetized AI Agents with ADK-TS, IQ AI, and x402 payment protocol</b>
  <br/>
   <i>LLM-powered • x402 Micropayments • IQ AI ATP Integration • TypeScript</i>
   </div>
@@ -52,14 +52,14 @@ This template demonstrates how to build **monetized AI agents** that:
 - A crypto wallet with Base Sepolia ETH and USDC for micropayments
 - Basic understanding of cryptocurrency/Web3
 
-## Step 1: Create Project Using ADK CLI
+## Step 1: Clone and Install
 
 ```bash
-# Create a new project with the x402 Agent template (replace "my-x402-agent" with your desired project name)
-npx @iqai/adk-cli new --template x402-agent my-x402-agent
+# Clone this repository
+git clone https://github.com/IQAIcom/iqai-x402-agent.git
+cd iqai-x402-agent
 
-# Navigate to your project and install dependencies
-cd my-x402-agent
+# Install dependencies
 pnpm install
 ```
 
@@ -81,7 +81,7 @@ You need a wallet private key with Base Sepolia ETH for micropayments:
    - Export the private key (keep this secure!)
 
 2. **Fund with Base Sepolia ETH**:
-   - Get Base Sepolia ETH from [Google Sepolia Faucet](<https://cloud.google.com/application/web3/faucet/ethereum/sepolia>)
+   - Get Base Sepolia ETH from [Base Sepolia Faucet](https://docs.base.org/base-chain/tools/network-faucets?ref=blog.iqai.com) or [Google Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 3. **Fund with testnet USDC**:
    - Get testnet USDC from [Circle Testnet Faucet](https://faucet.circle.com/)
@@ -331,17 +331,18 @@ NETWORK=mainnet  # or polygon, optimism, etc.
 
 ### x402 Protocol Resources
 
+- [x402 Protocol Overview](https://www.coinbase.com/developer-platform/products/x402)
 - [x402 Protocol Documentation](https://www.x402.org/)
 - [x402 GitHub Repository](https://github.com/coinbase/x402)
 
 ### IQ AI ATP Resources
 
-- [IQ AI Agent Tokenization Platform](https://iqai.com/)
+- [IQ AI Agent Tokenization Platform (ATP)](https://iqai.com/)
 - [ATP API Documentation](https://app.iqai.com/api)
 
 ## 🤝 Contributing
 
-This [template](https://github.com/IQAIcom/adk-ts/tree/main/apps/starter-templates/x402-agent) is open source and contributions are welcome! Feel free to:
+This [template](https://github.com/IQAIcom/iqai-x402-agent) is open source and contributions are welcome! Feel free to:
 
 - Report bugs or suggest improvements
 - Add new tool examples
