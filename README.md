@@ -1,3 +1,10 @@
+> ⚠️ **This repository has been archived.**
+>
+> The x402 Agent Template has been moved to our official **ADK-TS Samples** repo:
+> https://github.com/IQAIcom/adk-ts-samples
+>
+> Future updates, maintenance, and support will happen there.
+
 <div align="center">
  <img src="https://files.catbox.moe/vumztw.png" alt="ADK TypeScript Logo" width="100" />
  <br/>
