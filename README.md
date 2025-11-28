@@ -1,7 +1,7 @@
 > ⚠️ **This repository has been archived.**
 >
 > The x402 Agent Template has been moved to our official **ADK-TS Samples** repo:
-> https://github.com/IQAIcom/adk-ts-samples
+> https://github.com/IQAIcom/adk-ts-samples/tree/main/apps/atp-micropayment-agent
 >
 > Future updates, maintenance, and support will happen there.
 
